@@ -89,14 +89,17 @@ $(document).ready(function () {
   var Galleryswiper = new Swiper(".gallery-slider .swiper", {
     loop: true,
     freeMode: true,
-    observer: true,
+    spaceBetween: 0,
+    grabCursor: true,
+
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true,
+    },
     speed: 9000,
     a11y: {
       enabled: false,
-    },
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: false,
     },
     breakpoints: {
       0: {
@@ -134,10 +137,6 @@ $(document).ready(function () {
       }
       $(".footer-title").not(this).siblings().slideUp(500);
     });
-
-
-
-
   }
 
   /* ~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~ */
@@ -153,11 +152,6 @@ $(document).ready(function () {
       $("body").removeClass("overflow");
     });
   }
-  
-  $(".gallery-img").click(function (e) {
-    e.stopPropagation();
-    e.preventDefault();
-  });
 });
 
 /* ~~~~~~~~~~~~~~~ Lazyload ~~~~~~~~~~~~~~~ */
