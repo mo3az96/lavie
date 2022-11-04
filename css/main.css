@@ -3,9 +3,19 @@
 }
 
 .loading-img {
-  background-color: #fafafa !important;
   position: relative;
   overflow: hidden;
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
 }
 .loading-img img {
   opacity: 0 !important;
@@ -17,6 +27,23 @@
   filter: blur(0);
 }
 
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
 body {
   position: relative;
   font-family: Messiri;
@@ -403,7 +430,8 @@ html[dir=ltr] select {
   transition: all 0.3s ease-in-out;
 }
 .form-submit:hover {
-  background-color: #5abef2;
+  background-color: #eec99e;
+  color: #171515;
 }
 
 .service-item .service-img-cont {
@@ -532,35 +560,6 @@ html[dir=ltr] select {
   text-decoration: line-through;
   -webkit-margin-start: 10px;
           margin-inline-start: 10px;
-}
-
-.programs-line {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-@media (max-width: 1199px) {
-  .programs-line {
-    gap: 15px;
-  }
-}
-@media (max-width: 991px) {
-  .programs-line {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 767px) {
-  .programs-line {
-    grid-template-columns: 1fr;
-  }
-}
-.programs-line:nth-of-type(2) .program-item .program-link {
-  padding-bottom: 113.513513514%;
-}
-@media (max-width: 1199px) {
-  .programs-line:nth-of-type(2) .program-item .program-link {
-    padding-bottom: 100%;
-  }
 }
 
 .testimonial-item {
@@ -880,8 +879,8 @@ textarea.form-control {
   transition: all 0.3s ease-in-out;
 }
 .form-btn:hover {
-  background-color: #5abef2;
-  color: #fff;
+  background-color: #eec99e;
+  color: #171515;
 }
 .form-btn.contact-btn {
   -webkit-margin-start: auto;
@@ -900,6 +899,11 @@ header .pattern {
 }
 header .pattern img {
   width: 100%;
+}
+@media (max-width: 1199px) {
+  header {
+    overflow: unset;
+  }
 }
 
 .top-header-sec {
@@ -1145,7 +1149,7 @@ header .pattern img {
   border: none;
   align-items: center;
   justify-content: center;
-  fill: #e1953c;
+  fill: #5abef2;
   height: 24px;
   width: 24px;
   padding: 0;
@@ -1153,6 +1157,27 @@ header .pattern img {
 @media (max-width: 1199px) {
   .menu-btn {
     display: block;
+  }
+}
+
+.header .lang-select {
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: none;
+}
+.header .lang-select:after {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .header .lang-select {
+    display: flex;
+    -webkit-margin-start: auto;
+            margin-inline-start: auto;
+  }
+  .header .lang-select .lang-list {
+    min-width: 100px;
   }
 }
 
@@ -1224,8 +1249,8 @@ header .pattern img {
   transition: all 0.3s ease-in-out;
 }
 .lavie-btn:hover {
-  background-color: #5abef2;
-  color: #fff;
+  background-color: #eec99e;
+  color: #171515;
 }
 .services-sec .lavie-btn {
   margin-top: 20px;
@@ -1701,30 +1726,27 @@ html[dir=ltr] .contact-link:not(span):hover {
   justify-content: flex-end;
   padding: 5px 20px;
   background-color: #fff;
-  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1019607843);
   position: relative;
-  height: 50px;
 }
 .header-nav-head .nav-logo {
-  width: 40px;
-  margin: auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5px;
+  width: 70px;
+  margin: 30px auto;
 }
 .header-nav-head .menu-close {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  fill: #e1953c;
+  fill: #e5e5e5;
   text-decoration: none;
+  position: absolute;
+  top: 30px;
+  inset-inline-end: 15px;
   transition: fill 0.3s ease-in-out;
 }
 .header-nav-head .menu-close svg {
   transform: rotate(45deg);
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 .header-nav-head .menu-close:hover {
   fill: #e1953c;
@@ -1734,17 +1756,35 @@ html[dir=ltr] .contact-link:not(span):hover {
   display: none;
 }
 
+.header-tools-li {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.header-tools-li .header-socials {
+  margin: 20px 0;
+}
+.header-tools-li .header-socials .social {
+  width: 40px;
+  height: 40px;
+}
+.header-tools-li .header-socials .social svg {
+  transform: scale(1.5);
+}
+
 @media (max-width: 1199px) {
   .header-nav {
     position: fixed;
     top: 0;
-    inset-inline-start: -300px;
+    inset-inline-start: -100%;
     bottom: 0;
-    background-color: #f6f4ed;
+    background-color: #fff;
     border: none;
     z-index: 999;
-    width: 280px;
-    max-width: 90%;
+    width: 100%;
     overflow-y: auto;
     height: auto;
     transition: all 0.5s ease-in-out;
@@ -1757,9 +1797,9 @@ html[dir=ltr] .contact-link:not(span):hover {
   }
   .header-list {
     display: block;
-    padding: 20px 0;
-    margin: 15px 10px;
-    min-height: calc(100% - 100px);
+    padding: 0 15px;
+    margin: 0 0;
+    min-height: 100%;
     background-color: #fff;
     width: auto;
   }
@@ -1770,32 +1810,15 @@ html[dir=ltr] .contact-link:not(span):hover {
   .header-list li ~ li {
     -webkit-margin-start: 0;
             margin-inline-start: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+  .header-list li ~ li.header-tools-li {
+    border: none;
   }
   .header-list li.mobile-li {
     display: flex;
     justify-content: center;
     padding: 7.5px 20px;
-  }
-  .header-list li.lang-li {
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
-  }
-  .header-list li.lang-li span {
-    color: #171515;
-    font-size: 16px;
-  }
-  .header-list li.lang-li a {
-    width: auto;
-  }
-  .header-list .lang-li-a {
-    color: #e1953c;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
   }
   .header-list a {
     display: flex;
@@ -1804,10 +1827,8 @@ html[dir=ltr] .contact-link:not(span):hover {
     font-size: 16px;
   }
   .header-list a:after {
-    left: auto;
-    inset-inline-start: 0;
-    transform: none;
-    pointer-events: none;
+    display: none;
+    content: unset;
   }
   .header-list a:hover {
     color: #e1953c;

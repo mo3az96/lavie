@@ -95,7 +95,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: {
       delay: 1,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
     },
     speed: 9000,
     a11y: {
