@@ -430,8 +430,8 @@ html[dir=ltr] select {
   transition: all 0.3s ease-in-out;
 }
 .form-submit:hover {
-  background-color: #eec99e;
-  color: #171515;
+  background-color: rgba(225, 149, 60, 0.9);
+  color: #fff;
 }
 
 .service-item .service-img-cont {
@@ -482,7 +482,7 @@ html[dir=ltr] select {
   transition: color 0.3s ease-in-out;
 }
 .service-item .service-name:hover {
-  color: #e1953c;
+  color: rgba(23, 21, 21, 0.9);
 }
 @media (max-width: 767px) {
   .service-item .service-name {
@@ -707,7 +707,7 @@ html[dir=ltr] select {
   transition: all 0.3s ease-in-out;
 }
 .offer-item .name-link:hover {
-  color: #e1953c;
+  color: rgba(23, 21, 21, 0.9);
 }
 .offer-item .offer-time {
   display: flex;
@@ -768,7 +768,7 @@ html[dir=ltr] select {
   transition: all 0.3s ease-in-out;
 }
 .offer-item .more:hover {
-  background-color: #e1953c;
+  background-color: rgba(59, 119, 197, 0.9);
   color: #fff;
 }
 
@@ -879,8 +879,8 @@ textarea.form-control {
   transition: all 0.3s ease-in-out;
 }
 .form-btn:hover {
-  background-color: #eec99e;
-  color: #171515;
+  background-color: rgba(225, 149, 60, 0.9);
+  color: #fff;
 }
 .form-btn.contact-btn {
   -webkit-margin-start: auto;
@@ -1010,7 +1010,7 @@ header .pattern img {
   transition: color 0.3s ease-in-out;
 }
 .lang-select .lang-link:hover {
-  color: #e1953c;
+  color: rgba(2, 35, 53, 0.9);
 }
 .lang-select .lang-link:last-of-type {
   margin: 0;
@@ -1018,8 +1018,8 @@ header .pattern img {
   border: none;
 }
 .lang-select:hover .lang-btn {
-  color: #e1953c;
-  stroke: #e1953c;
+  color: rgba(2, 35, 53, 0.9);
+  stroke: rgba(2, 35, 53, 0.9);
 }
 .lang-select:hover .lang-list {
   visibility: visible;
@@ -1053,7 +1053,7 @@ header .pattern img {
   align-items: center;
 }
 .header-phone:hover {
-  color: #5abef2;
+  color: rgba(51, 51, 51, 0.9);
 }
 
 .header-links {
@@ -1068,7 +1068,7 @@ header .pattern img {
   transition: all 0.3s ease-in-out;
 }
 .header-link:hover {
-  color: #5abef2;
+  color: rgba(225, 149, 60, 0.9);
 }
 
 .header-socials {
@@ -1249,8 +1249,8 @@ header .pattern img {
   transition: all 0.3s ease-in-out;
 }
 .lavie-btn:hover {
-  background-color: #eec99e;
-  color: #171515;
+  background-color: rgba(225, 149, 60, 0.9);
+  color: #fff;
 }
 .services-sec .lavie-btn {
   margin-top: 20px;
@@ -1576,7 +1576,7 @@ footer {
           margin-inline-end: 5px;
 }
 .footer-link:hover {
-  color: #e1953c;
+  color: rgba(245, 249, 255, 0.9);
 }
 html[dir=rtl] .footer-link:hover {
   transform: translateX(-5px);
@@ -1610,7 +1610,7 @@ html[dir=ltr] .footer-link:hover {
   width: 30px;
 }
 .contact-link:not(span):hover {
-  color: #e1953c;
+  color: rgba(245, 249, 255, 0.9);
 }
 html[dir=rtl] .contact-link:not(span):hover {
   transform: translateX(-5px);
