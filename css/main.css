@@ -1111,6 +1111,8 @@ header .pattern img {
 @media (max-width: 991px) {
   .header {
     padding: 15px 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -1133,6 +1135,7 @@ header .pattern img {
 @media (max-width: 991px) {
   .logo {
     width: 70px;
+    margin: auto;
   }
 }
 
@@ -1695,16 +1698,20 @@ html[dir=ltr] .contact-link:not(span):hover {
 .header-nav-head {
   display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 5px 20px;
   background-color: #fff;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1019607843);
+  position: relative;
+  height: 50px;
 }
 .header-nav-head .nav-logo {
-  height: 40px;
-}
-.header-nav-head .nav-logo img {
-  max-height: 100%;
+  width: 40px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
 }
 .header-nav-head .menu-close {
   display: flex;
