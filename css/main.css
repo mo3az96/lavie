@@ -1757,7 +1757,7 @@ html[dir=ltr] .contact-link:not(span):hover {
 }
 
 .header-tools-li {
-  display: flex;
+  display: none;
   text-align: center;
   flex-direction: column;
   justify-content: center;
@@ -1814,6 +1814,7 @@ html[dir=ltr] .contact-link:not(span):hover {
   }
   .header-list li ~ li.header-tools-li {
     border: none;
+    display: flex;
   }
   .header-list li.mobile-li {
     display: flex;
