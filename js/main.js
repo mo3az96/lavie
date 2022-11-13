@@ -152,6 +152,8 @@ $(document).ready(function () {
       $("body").removeClass("overflow");
     });
   }
+
+  flatpickr("input[type='date']");
 });
 
 /* ~~~~~~~~~~~~~~~ Lazyload ~~~~~~~~~~~~~~~ */
