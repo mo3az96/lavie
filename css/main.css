@@ -1793,11 +1793,14 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 .contact-sec .sec-title {
   margin-bottom: 15px;
 }
+.map-sec .sec-title {
+  margin-bottom: 30px;
+}
 @media (max-width: 991px) {
   .sec-title {
     font-size: 24px;
   }
-  .services-sec .sec-title, .programs-sec .sec-title, .offers-sec .sec-title, .contact-sec .sec-title {
+  .services-sec .sec-title, .programs-sec .sec-title, .offers-sec .sec-title, .contact-sec .sec-title, .map-sec .sec-title {
     margin-bottom: 15px;
   }
 }
@@ -3022,6 +3025,29 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 }
 .ratestars input:checked ~ label {
   fill: #d8c418;
+}
+
+.map-sec {
+  padding: 60px 0 50px;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 422px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 422px;
+  border-radius: 20px;
+}
+
+.gmap_iframe {
+  height: 422px !important;
 }
 
 footer {
