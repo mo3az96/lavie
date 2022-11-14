@@ -3050,6 +3050,26 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
   height: 422px !important;
 }
 
+.notFound-sec {
+  padding: 140px 0;
+}
+@media (max-width: 991px) {
+  .notFound-sec {
+    padding: 70px 0;
+  }
+}
+
+.notFound-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.notFound-cont img {
+  margin-bottom: 40px;
+}
+
 footer {
   background-image: url(../images/pattern/pattern.png);
   background-size: cover;
