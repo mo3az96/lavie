@@ -154,6 +154,11 @@ $(document).ready(function () {
   }
 
   flatpickr("input[type='date']");
+  flatpickr("input[type='time']", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+  });
 });
 
 /* ~~~~~~~~~~~~~~~ Lazyload ~~~~~~~~~~~~~~~ */

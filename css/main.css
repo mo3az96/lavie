@@ -881,10 +881,12 @@ html[dir=ltr] select {
   grid-template-columns: 1fr 1fr;
   gap: 0 11px;
 }
+.form-group-grid.line-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 @media (max-width: 767px) {
   .form-group-grid {
-    display: block;
-    gap: unset;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -968,8 +970,7 @@ html[dir=ltr] select {
   background-position: right 11px top 50%;
 }
 
-.flatpickr-input.form-control,
-input[type=date].form-control {
+input[data-type=date].form-control {
   background-image: url(../images/date.svg);
   background-repeat: no-repeat;
   background-size: 9px;
@@ -977,12 +978,25 @@ input[type=date].form-control {
   -moz-appearance: none;
   appearance: none;
 }
-html[dir=rtl] .flatpickr-input,
-html[dir=rtl] input[type=date] {
+html[dir=rtl] input[data-type=date] {
   background-position: left 11px top 50%;
 }
-html[dir=ltr] .flatpickr-input,
-html[dir=ltr] input[type=date] {
+html[dir=ltr] input[data-type=date] {
+  background-position: right 11px top 50%;
+}
+
+input[data-type=time].form-control {
+  background-image: url(../images/time.svg);
+  background-repeat: no-repeat;
+  background-size: 9px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+html[dir=rtl] input[data-type=time] {
+  background-position: left 11px top 50%;
+}
+html[dir=ltr] input[data-type=time] {
   background-position: right 11px top 50%;
 }
 
@@ -1017,6 +1031,63 @@ textarea.form-control {
 }
 .form-btn.book-btn {
   width: 100%;
+}
+
+.radios {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio {
+  width: 100px;
+  flex-shrink: 0;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .radio {
+    width: 95px;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+}
+.radio label {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.radio .select-mark {
+  border: 1px solid #8f9bb3;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.radio .select-mark svg {
+  fill: #fff;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.radio input {
+  display: none;
+}
+.radio input:checked ~ .select-mark {
+  border-color: #fff;
+}
+.radio input:checked ~ .select-mark svg {
+  fill: #e1953c;
+  transform: scale(1);
 }
 
 .contact-group-grid {
@@ -2345,9 +2416,12 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
   background-size: cover;
   background-position: center;
   padding: 240px 0 15px;
+  min-height: 520px;
   position: relative;
   overflow: hidden;
   border-radius: 0px 0px 30px 30px;
+  display: flex;
+  align-items: flex-end;
 }
 .single-main-sec:after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6117647059) 53%, rgba(0, 0, 0, 0.7803921569) 100%);
@@ -2373,6 +2447,7 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 }
 @media (max-width: 991px) {
   .single-main-sec {
+    min-height: auto;
     padding: 70px 0 20px;
     border-radius: 0px 0px 20px 20px;
   }
@@ -2408,6 +2483,16 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 991px) {
   .single-main-div .single-title {
     font-size: 28px;
+  }
+}
+.single-main-div .single-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 30px 0 40px;
+}
+@media (max-width: 991px) {
+  .single-main-div .single-subtitle {
+    font-size: 18px;
   }
 }
 .single-main-div .single-time {
@@ -2481,6 +2566,10 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
   .single-content {
     padding: 40px 0 0;
   }
+}
+
+.single-desc div:last-child {
+  margin: 0;
 }
 
 .single-content-title {
