@@ -194,3 +194,8 @@ function preloadImage(img) {
     img.parentElement.parentElement.classList.add("lazy-head-img");
   };
 }
+
+var loadFile = function (event) {
+  var src = URL.createObjectURL(event.target.files[0]);
+  $("<img src='" + src + "'/>").appendTo(".img-here");
+};
