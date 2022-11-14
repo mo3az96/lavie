@@ -907,7 +907,7 @@ html[dir=ltr] select {
 }
 @media (max-width: 767px) {
   .form-group-grid {
-    grid-template-columns: 1fr;
+    display: block;
   }
 }
 
@@ -3068,6 +3068,42 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 }
 .notFound-cont img {
   margin-bottom: 40px;
+}
+
+.company-sec {
+  padding: 50px 0 46px;
+  background-image: url(../images/pattern/services.png);
+  background-color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media (max-width: 991px) {
+  .company-sec {
+    padding: 40px 0;
+  }
+}
+
+.company-cont {
+  width: 100%;
+  max-width: 445px;
+  margin: auto;
+  padding: 30px 25px;
+  background-color: #f2f6ff;
+  border-radius: 25px;
+}
+
+.company-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #121315;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.company-title:after {
+  content: url(../images/pattern/single.svg);
 }
 
 footer {
