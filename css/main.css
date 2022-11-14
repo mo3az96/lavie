@@ -737,6 +737,27 @@ html[dir=ltr] select {
   height: 66px;
 }
 
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .testimonials-grid {
+    gap: 20px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .offer-item {
   max-width: 100%;
   overflow: hidden;
@@ -1774,6 +1795,9 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
     margin-top: 30px;
   }
 }
+.lavie-btn.testimonial-add {
+  margin-bottom: 35px;
+}
 
 .services-sec {
   padding: 50px 0;
@@ -2386,6 +2410,14 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
           margin-inline-start: 10px;
 }
 .page-more:hover {
+  color: #e1953c;
+  fill: #e1953c;
+}
+.testimonials-cont .page-more {
+  color: #fff;
+  fill: #fff;
+}
+.testimonials-cont .page-more:hover {
   color: #e1953c;
   fill: #e1953c;
 }
