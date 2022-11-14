@@ -1111,6 +1111,117 @@ textarea.contact-control {
   height: 144px;
 }
 
+.booking-item {
+  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 20px;
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .booking-item {
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+  }
+}
+.booking-item .booking-img {
+  padding-bottom: 52.972972973%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1019607843);
+}
+.booking-item .img-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.booking-item .img-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.booking-item .img-link:hover img {
+  transform: scale(1.05);
+}
+.booking-item .booking-text {
+  padding: 20px 20px 15px;
+}
+.booking-item .booking-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 15px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #171515;
+}
+.booking-item .name-link {
+  font-weight: 500;
+  font-size: 18px;
+  color: #171515;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.booking-item .name-link:hover {
+  color: #e1953c;
+}
+.booking-item .booking-prices {
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px;
+}
+.booking-item .booking-prices strong {
+  font-weight: 600;
+  font-size: 16px;
+  color: #e1953c;
+}
+.booking-item .booking-prices del {
+  font-weight: 400;
+  color: #5b8aa2;
+  font-size: 14px;
+  text-decoration: line-through;
+  -webkit-margin-start: 13px;
+          margin-inline-start: 13px;
+}
+.booking-item .booking-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #edf1f3;
+  padding-top: 15px;
+}
+.booking-item .booking-status {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #5b8aa2;
+  font-weight: 500;
+}
+.booking-item .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 40px;
+  background-color: #3b77c5;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.booking-item .more:hover {
+  background-color: rgba(59, 119, 197, 0.9);
+  color: #fff;
+}
+
 header {
   position: relative;
   overflow: hidden;
@@ -2633,6 +2744,40 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
 @media (max-width: 991px) {
   .single-book {
     padding: 30px 15px;
+  }
+}
+
+.subservices-sec {
+  padding: 77px 61px;
+  background-image: url(../images/pattern/pattern.png);
+  background-color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media (max-width: 991px) {
+  .subservices-sec {
+    padding: 40px 0;
+  }
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .booking-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .booking-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
   }
 }
 
