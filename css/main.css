@@ -693,12 +693,17 @@ html[dir=ltr] select {
 }
 .testimonial-item .user-text {
   width: 100%;
+  overflow: hidden;
 }
 .testimonial-item .user-name {
   font-size: 16px;
   font-weight: 500;
   color: rgba(4, 7, 64, 0.871);
   margin: 0 0 7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 20px;
 }
 .testimonial-item .rate-date {
   display: flex;
@@ -1576,7 +1581,7 @@ header .pattern img {
   right: 50%;
   transform: translateX(50%);
 }
-.lang-select .lang-link {
+.lang-select .lang-list a {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -1590,10 +1595,10 @@ header .pattern img {
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
-.lang-select .lang-link:hover {
+.lang-select .lang-list a:hover {
   color: #e1953c;
 }
-.lang-select .lang-link:last-of-type {
+.lang-select .lang-list a:last-of-type {
   margin: 0;
   padding: 0;
   border: none;
@@ -3534,6 +3539,26 @@ html[dir=ltr] .contact-link:not(span):hover {
   transform: scale(1.5);
 }
 
+.header-nav-footer {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 25px;
+}
+.header-nav-footer .header-socials {
+  margin: 20px 0;
+}
+.header-nav-footer .header-socials .social {
+  width: 40px;
+  height: 40px;
+}
+.header-nav-footer .header-socials .social svg {
+  transform: scale(1.5);
+}
+
 @media (max-width: 1199px) {
   .header-nav {
     position: fixed;
@@ -3552,6 +3577,10 @@ html[dir=ltr] .contact-link:not(span):hover {
     inset-inline-start: 0;
   }
   .header-nav-head {
+    display: flex;
+  }
+  .header-nav-footer {
+    border: none;
     display: flex;
   }
   .header-list {
