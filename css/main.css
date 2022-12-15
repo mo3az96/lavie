@@ -2773,6 +2773,9 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
   }
 }
 
+.single-desc {
+  margin-bottom: 20px;
+}
 .single-desc div:last-child {
   margin: 0;
 }
@@ -2829,7 +2832,7 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
   font-size: 16px;
   line-height: 2;
   color: #5c5c5c;
-  margin: 0 0 20px;
+  margin: 0 0 0;
 }
 .single-paragraph p.highlight {
   background-color: #f6f7f9;
@@ -2844,8 +2847,19 @@ html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
     padding: 15px;
   }
 }
-.single-paragraph p:last-of-type {
-  margin-bottom: 0;
+.single-paragraph blockquote {
+  background-color: #f6f7f9;
+  -webkit-border-start: 4px solid #e1953c;
+          border-inline-start: 4px solid #e1953c;
+  padding: 20px 25px 13px;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+  margin: 20px 0;
+}
+@media (max-width: 991px) {
+  .single-paragraph blockquote {
+    padding: 15px;
+  }
 }
 
 .single-list-items {
