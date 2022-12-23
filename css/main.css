@@ -3323,20 +3323,18 @@ footer {
     height: auto;
   }
 }
-
-.footer-li {
+.footer-ul li {
   margin-bottom: 16px;
 }
-.footer-li:last-of-type {
+.footer-ul li:last-of-type {
   margin: 0;
 }
 @media (max-width: 767px) {
-  .footer-li {
+  .footer-ul li {
     margin-bottom: 10px;
   }
 }
-
-.footer-link {
+.footer-ul a {
   display: inline-flex;
   align-items: center;
   font-size: 13px;
@@ -3344,7 +3342,7 @@ footer {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-.footer-link::before {
+.footer-ul a::before {
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -3353,29 +3351,28 @@ footer {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
 }
-.footer-link:hover {
+.footer-ul a:hover {
   color: #e1953c;
 }
-html[dir=rtl] .footer-link:hover {
+html[dir=rtl] .footer-ul a:hover {
   transform: translateX(-5px);
 }
-html[dir=ltr] .footer-link:hover {
+html[dir=ltr] .footer-ul a:hover {
   transform: translateX(5px);
 }
 
-.contact-li {
+.contact-ul li {
   margin-bottom: 29px;
 }
-.contact-li:last-of-type {
+.contact-ul li:last-of-type {
   margin: 0;
 }
 @media (max-width: 767px) {
-  .contact-li {
+  .contact-ul li {
     margin-bottom: 10px;
   }
 }
-
-.contact-link {
+.contact-ul a {
   display: inline-flex;
   align-items: center;
   font-size: 13px;
@@ -3384,17 +3381,32 @@ html[dir=ltr] .footer-link:hover {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-.contact-link .contact-icon {
+.contact-ul a .contact-icon {
   width: 30px;
 }
-.contact-link:not(span):hover {
+.contact-ul a::before {
+  display: none;
+}
+.contact-ul a:hover {
   color: #e1953c;
 }
-html[dir=rtl] .contact-link:not(span):hover {
+html[dir=rtl] .contact-ul a:hover {
   transform: translateX(-5px);
 }
-html[dir=ltr] .contact-link:not(span):hover {
+html[dir=ltr] .contact-ul a:hover {
   transform: translateX(5px);
+}
+.contact-ul span {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  color: #f5f9ff;
+  fill: #e1953c;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact-ul span .contact-icon {
+  width: 30px;
 }
 
 .last-footer {
