@@ -159,6 +159,35 @@ $(document).ready(function () {
     noCalendar: true,
     dateFormat: "H:i",
   });
+
+  var thumbsSwiper = new Swiper(".thumbsSwiper", {
+    // loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    a11y: {
+      enabled: false,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  var mainSwiper = new Swiper(".mainSwiper", {
+    // loop: true,
+    spaceBetween: 10,
+    a11y: {
+      enabled: false,
+    },
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 });
 
 /* ~~~~~~~~~~~~~~~ Lazyload ~~~~~~~~~~~~~~~ */
