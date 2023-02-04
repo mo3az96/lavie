@@ -3835,4 +3835,21 @@ html[dir=ltr] .contact-ul a:hover {
 .single-slider .mainSwiper:hover .swiper-btn {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 1199px) {
+  .top-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 0 5px;
+  }
+  .top-header .header-tools {
+    display: none;
+  }
+  .top-header .header-socials {
+    display: none;
+  }
+  .header {
+    padding-top: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */
