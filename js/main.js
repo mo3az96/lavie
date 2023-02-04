@@ -188,6 +188,31 @@ $(document).ready(function () {
       },
     },
   });
+
+  var stayingLocationSwiper = new Swiper(".stayingLocationSwiper .swiper", {
+    loop: true,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    a11y: {
+      enabled: false,
+    },
+    pagination: {
+      el: ".stayingLocationSwiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".stayingLocationSwiper .swiper-button-next",
+      prevEl: ".stayingLocationSwiper .swiper-button-prev",
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 });
 
 /* ~~~~~~~~~~~~~~~ Lazyload ~~~~~~~~~~~~~~~ */

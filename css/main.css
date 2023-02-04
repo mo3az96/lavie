@@ -3692,4 +3692,69 @@ html[dir=ltr] .contact-ul a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.stayingLocationSwiper {
+  margin-bottom: 40px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.stayingLocationSwiper .stayingLocation-img {
+  margin: 0;
+  border-radius: 0;
+}
+.stayingLocationSwiper .swiper-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 45px;
+  inset-inline-end: -1000px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 991px) {
+  .stayingLocationSwiper .swiper-tools {
+    display: none;
+  }
+}
+.stayingLocationSwiper .swiper-tools .swiper-btn {
+  position: relative;
+  margin: 0;
+  inset: unset;
+  transform: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1953c;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+.stayingLocationSwiper .swiper-tools .swiper-btn::after {
+  display: none;
+}
+.stayingLocationSwiper .swiper-tools .swiper-btn:hover {
+  background-color: #5abef2;
+}
+.stayingLocationSwiper:hover .swiper-tools {
+  inset-inline-end: 95px;
+}
+.stayingLocationSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+}
+.stayingLocationSwiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.5;
+}
+.stayingLocationSwiper .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: #e1953c;
+  opacity: 1;
+}
+.stayingLocationSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #e1953c;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
