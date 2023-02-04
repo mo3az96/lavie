@@ -3700,9 +3700,64 @@ html[dir=ltr] .contact-ul a:hover {
   border-radius: 30px;
   overflow: hidden;
 }
+.stayingLocationSwiper .stayingLocation-info {
+  position: absolute;
+  bottom: 45px;
+  inset-inline-start: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 2;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .stayingLocationSwiper .stayingLocation-info {
+    inset-inline-start: 20px;
+  }
+}
+.stayingLocationSwiper .stayingLocation-rate {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+.stayingLocationSwiper .stayingLocation-rate span {
+  fill: #040740;
+  opacity: 0.5;
+}
+.stayingLocationSwiper .stayingLocation-rate span ~ span {
+  -webkit-margin-start: 12px;
+          margin-inline-start: 12px;
+}
+.stayingLocationSwiper .stayingLocation-rate .active {
+  opacity: 1;
+  fill: #ffb91a;
+}
+.stayingLocationSwiper .stayingLocation-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .stayingLocationSwiper .stayingLocation-title {
+    font-size: 24px;
+  }
+}
 .stayingLocationSwiper .stayingLocation-img {
   margin: 0;
   border-radius: 0;
+  position: relative;
+}
+.stayingLocationSwiper .stayingLocation-img:after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6117647059) 53%, rgba(0, 0, 0, 0.7803921569) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  z-index: 1;
 }
 .stayingLocationSwiper .swiper-tools {
   display: flex;
@@ -3710,7 +3765,7 @@ html[dir=ltr] .contact-ul a:hover {
   justify-content: center;
   position: absolute;
   bottom: 45px;
-  inset-inline-end: -1000px;
+  inset-inline-end: 95px;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 991px) {
@@ -3739,9 +3794,6 @@ html[dir=ltr] .contact-ul a:hover {
 .stayingLocationSwiper .swiper-tools .swiper-btn:hover {
   background-color: #5abef2;
 }
-.stayingLocationSwiper:hover .swiper-tools {
-  inset-inline-end: 95px;
-}
 .stayingLocationSwiper .swiper-pagination {
   position: absolute;
   bottom: 20px;
@@ -3756,5 +3808,31 @@ html[dir=ltr] .contact-ul a:hover {
 }
 .stayingLocationSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #e1953c;
+  opacity: 1;
+}
+
+.single-slider .mainSwiper .swiper-btn {
+  margin: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1953c;
+  border-radius: 50%;
+  margin: 0 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.single-slider .mainSwiper .swiper-btn::after {
+  display: none;
+}
+.single-slider .mainSwiper .swiper-btn:hover {
+  background-color: #5abef2;
+}
+.single-slider .mainSwiper:hover .swiper-btn {
+  visibility: visible;
   opacity: 1;
 }/*# sourceMappingURL=main.css.map */

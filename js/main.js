@@ -182,6 +182,10 @@ $(document).ready(function () {
     thumbs: {
       swiper: thumbsSwiper,
     },
+    navigation: {
+      nextEl: ".mainSwiper .swiper-button-next",
+      prevEl: ".mainSwiper .swiper-button-prev",
+    },
     on: {
       init: function (swiper) {
         lazyLoad();
